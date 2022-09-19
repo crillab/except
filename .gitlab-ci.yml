@@ -1,0 +1,19 @@
+stages:
+  - build
+  - post-build
+build:
+  stage: build
+  variables:
+    GIT_SUBMODULE_STRATEGY: recursive
+  script:
+    - mkdir build
+    - cd build
+    - cmake .. -DCMAKE_BUILD_TYPE=RELEASE
+    - cmake --build .
+  artifacts:
+    paths:
+      - cmake-build-debug/libexcept.a
+  tags:
+    - wallon
+  only:
+    - master
