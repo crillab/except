@@ -38,7 +38,8 @@
 namespace Except {
 
     /**
-     * The Exception is the parent class of all exceptions that can be
+     * @class Exception
+     * @brief The Exception is the parent class of all exceptions that can be
      * thrown by Otis.
      *
      * @version 0.1.0
@@ -73,7 +74,8 @@ namespace Except {
     };
 
     /**
-     * The IllegalArgumentException is an exception that is thrown when an
+     * @class IllegalArgumentException
+     * @brief The IllegalArgumentException is an exception that is thrown when an
      * argument given to a method or function does not match the expectations
      * for this method or function.
      *
@@ -93,7 +95,8 @@ namespace Except {
     };
 
     /**
-     * The IllegalStateException is an exception that is thrown when an object
+     * @class IllegalStateException
+     * @brief The IllegalStateException is an exception that is thrown when an object
      * is not in an appropriate state to allow to invoke a method.
      *
      * @version 0.1.0
@@ -103,7 +106,8 @@ namespace Except {
     public:
 
         /**
-         * Creates a new IllegalStateException.
+         *
+         * @brief Creates a new IllegalStateException.
          *
          * @param message The message describing why the current state does not
          *        allow to invoke the method.
@@ -113,7 +117,8 @@ namespace Except {
     };
 
     /**
-     * The ParseException is an exception that is thrown when a parser cannot
+     * @class ParseException
+     * @brief The ParseException is an exception that is thrown when a parser cannot
      * parse properly an input stream.
      *
      * @version 0.1.0
@@ -132,7 +137,8 @@ namespace Except {
     };
 
     /**
-     * The UnsupportedOperationException is an exception that is thrown when an
+     * @class UnsupportedOperationException
+     * @brief The UnsupportedOperationException is an exception that is thrown when an
      * unsupported method is invoked.
      *
      * @version 0.1.0
@@ -149,7 +155,13 @@ namespace Except {
         explicit UnsupportedOperationException(std::string message);
 
     };
-
+    /**
+     * @class OSException
+     * @brief The OSException is an exception that is thrown when a
+     * system call is invoked.
+     *
+     * @version 0.1.0
+     */
     class OSException: public Except::Exception{
     public:
         /**
