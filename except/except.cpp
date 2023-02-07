@@ -1,5 +1,5 @@
 /******************************************************************************
- * Except - A library for exception in C++                               *
+ * OTIS - Opening wriTing and readIng instanceS                               *
  * Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.                   *
  * All rights reserved.                                                       *
  *                                                                            *
@@ -15,19 +15,8 @@
  *                                                                            *
  * You should have received a copy of the GNU Lesser General Public           *
  * License along with this library.                                           *
- * If not, see http:www.gnu.orglicenses.                              *
+ * If not, see {@link http:www.gnu.orglicenses}.                              *
  ******************************************************************************/
-
-/**
-* @file except.cpp
-* @author Thibault Falque
-* @author Romain Wallon
-* @date 18/09/22
-* @brief
-* @copyright Copyright (c) 2022 Exakis Nelite, Université d'Artois & CNRS
-* @license This project is released under the GNU LGPL3 License.
-*/
-
 
 #include "except.hpp"
 
@@ -69,4 +58,4 @@ OSException::OSException(std::string message) : Exception(std::to_string(errno)+
 
 }
 
-
+NoSuchElementException::NoSuchElementException(std::string message): Exception(move(message)) {}

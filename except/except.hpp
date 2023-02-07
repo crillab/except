@@ -1,5 +1,5 @@
 /******************************************************************************
- * Except - A library for exception in C++                               *
+ * exception -                                                                *
  * Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.                   *
  * All rights reserved.                                                       *
  *                                                                            *
@@ -15,16 +15,15 @@
  *                                                                            *
  * You should have received a copy of the GNU Lesser General Public           *
  * License along with this library.                                           *
- * If not, see http:www.gnu.orglicenses.                              *
+ * If not, see {@link http:www.gnu.orglicenses}.                              *
  ******************************************************************************/
 
 /**
-* @file except.hpp
 * @author Thibault Falque
 * @author Romain Wallon
 * @date 18/09/22
+* @file except.hpp
 * @brief
-* @copyright Copyright (c) 2022 Exakis Nelite, Université d'Artois & CNRS
 * @license This project is released under the GNU LGPL3 License.
 */
 
@@ -38,8 +37,7 @@
 namespace Except {
 
     /**
-     * @class Exception
-     * @brief The Exception is the parent class of all exceptions that can be
+     * The Exception is the parent class of all exceptions that can be
      * thrown by Otis.
      *
      * @version 0.1.0
@@ -74,8 +72,7 @@ namespace Except {
     };
 
     /**
-     * @class IllegalArgumentException
-     * @brief The IllegalArgumentException is an exception that is thrown when an
+     * The IllegalArgumentException is an exception that is thrown when an
      * argument given to a method or function does not match the expectations
      * for this method or function.
      *
@@ -95,8 +92,7 @@ namespace Except {
     };
 
     /**
-     * @class IllegalStateException
-     * @brief The IllegalStateException is an exception that is thrown when an object
+     * The IllegalStateException is an exception that is thrown when an object
      * is not in an appropriate state to allow to invoke a method.
      *
      * @version 0.1.0
@@ -106,8 +102,7 @@ namespace Except {
     public:
 
         /**
-         *
-         * @brief Creates a new IllegalStateException.
+         * Creates a new IllegalStateException.
          *
          * @param message The message describing why the current state does not
          *        allow to invoke the method.
@@ -117,8 +112,7 @@ namespace Except {
     };
 
     /**
-     * @class ParseException
-     * @brief The ParseException is an exception that is thrown when a parser cannot
+     * The ParseException is an exception that is thrown when a parser cannot
      * parse properly an input stream.
      *
      * @version 0.1.0
@@ -137,8 +131,7 @@ namespace Except {
     };
 
     /**
-     * @class UnsupportedOperationException
-     * @brief The UnsupportedOperationException is an exception that is thrown when an
+     * The UnsupportedOperationException is an exception that is thrown when an
      * unsupported method is invoked.
      *
      * @version 0.1.0
@@ -155,21 +148,25 @@ namespace Except {
         explicit UnsupportedOperationException(std::string message);
 
     };
-    /**
-     * @class OSException
-     * @brief The OSException is an exception that is thrown when a
-     * system call is invoked.
-     *
-     * @version 0.1.0
-     */
+
     class OSException: public Except::Exception{
     public:
         /**
         * Creates a new OSException.
         *
-        * @param message The message describing why the method is not supported.
+        * @param message The message describing the problem that occurred.
         */
         explicit OSException(std::string message);
+    };
+
+    class NoSuchElementException: public Except::Exception{
+    public:
+        /**
+        * Creates a new NoSuchElementException.
+        *
+        * @param message The message describing the problem that occurred.
+        */
+        explicit NoSuchElementException(std::string message);
     };
 
 }
