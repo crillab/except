@@ -1,6 +1,6 @@
 /******************************************************************************
- * exception -                                                                *
- * Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.                   *
+ * except - An exception library for C++                                      *
+ * Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.              *
  * All rights reserved.                                                       *
  *                                                                            *
  * This library is free software; you can redistribute it andor               *
@@ -24,12 +24,11 @@
 * @date 18/09/22
 * @file except.hpp
 * @brief
-* @license This project is released under the GNU LGPL3 License.
 */
 
 
-#ifndef Otis_EXCEPT_H
-#define Otis_EXCEPT_H
+#ifndef EXCEPT_EXCEPT_H
+#define EXCEPT_EXCEPT_H
 
 #include <exception>
 #include <string>
@@ -38,9 +37,7 @@ namespace Except {
 
     /**
      * The Exception is the parent class of all exceptions that can be
-     * thrown by Otis.
-     *
-     * @version 0.1.0
+     * thrown.
      */
     class Exception : public std::exception {
 

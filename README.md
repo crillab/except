@@ -1,8 +1,8 @@
-# EXCEPT - An exception library for C++
+# crillab-except - An exception library for C++
 
 | License | Linux & Windows & MacOS                                                                                                                                                     | SonarCloud |
 | -------- |-----------------------------------------------------------------------------------------------------------------------------------------------------------| ------- |
-| [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)     | [![Build Status](https://github.com/crillab/except/actions/workflows/cmake.yml/badge.svg)](https://github.com/crillab/except/actions/workflows/cmake.yml) |  
+| [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)     | [![Build Status](https://github.com/crillab/except/actions/workflows/ci.yml/badge.svg)](https://github.com/crillab/except/actions/workflows/ci.yml) |  
 
 ## Description
 
@@ -14,40 +14,14 @@
 - `UnsupportedOperationException`
 - `OSException`
 
-## Build
+# Building and installing
 
-The latest release is available [here](/releases/latest)
+See the [BUILDING](BUILDING.md) document.
 
-`EXCEPT` is developed using [C++ 17](https://en.cppreference.com/w/cpp/17),
-[CMake 3.23](https://cmake.org/).
-Installing CMake is required if you want to build from source.
-To do so, after having installed all the needed tools, you will need to clone
-the project:
+# Contributing
 
-```bash
-git clone https://github.com/crillab/except.git --recursive
-cd except
-mkdir build
-cd build 
-cmake .. -DCMAKE_BUILD_TYPE=RELEASE
-cmake --build . 
-```
+See the [CONTRIBUTING](CONTRIBUTING.md) document.
 
-## Using CMake
+# Licensing
 
-This library is designed for simplified use in projects using CMake. To use this project, it is possible to
-create a sub-module in your project with the following commands:
-
-```bash
-git submodule add https://github.com/crillab/except libs/except
-git submodule update --remote --recursive --init
-```
-
-And then add the following instructions in your CMakeLists.txt file:
-
-```cmake
-add_subdirectory(libs/except)
-add_executable(your_program main.c)
-target_link_libraries(your_program exception)
-```
-
+See the [LICENSE](LICENSE.md) document.

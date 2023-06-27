@@ -1,6 +1,6 @@
 /******************************************************************************
- * OTIS - Opening wriTing and readIng instanceS                               *
- * Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.                   *
+ * except - An exception library for C++                                      *
+ * Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.              *
  * All rights reserved.                                                       *
  *                                                                            *
  * This library is free software; you can redistribute it andor               *
@@ -18,7 +18,7 @@
  * If not, see {@link http:www.gnu.orglicenses}.                              *
  ******************************************************************************/
 
-#include "except.hpp"
+#include "crillab-except/except.hpp"
 
 #include <utility>
 #include <cstring>
