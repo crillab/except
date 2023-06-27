@@ -27,10 +27,11 @@ jobs:
         with:
           name: libcrillab-except-${{ matrix.os }}
           path: |
+            ${{github.workspace}}/build-${{ matrix.os }}/*/crillab-except.*
             ${{github.workspace}}/build-${{ matrix.os }}/libcrillab-except.*
             ${{github.workspace}}/include/*/*.hpp
       - name: Create Release
-        if: startsWith( github.ref, 'release' )
+        if: startsWith(github.ref, 'refs/tags/')
         uses: fnkr/github-action-ghr@v1.3
   docs:
     runs-on: ubuntu-22.04
