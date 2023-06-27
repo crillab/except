@@ -110,7 +110,7 @@ file(GLOB_RECURSE HEADERS
 # Adding the library to the build targets.
 add_library(${LIBRARY_NAME} ${SOURCES} ${HEADERS})
 set_target_properties(${LIBRARY_NAME} PROPERTIES LINKER_LANGUAGE CXX)
-
+target_include_directories(${LIBRARY_NAME} INTERFACE except)
 if (WIN32)
     install(TARGETS ${LIBRARY_NAME}
             RUNTIME DESTINATION ${CMAKE_INSTALL_LIBDIR}
