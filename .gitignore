@@ -38,9 +38,15 @@
 
 # CMAKE 
 
-build/
+build*/
 cmake-build-*/
 prefix/
 **/.DS_Store
 CMakeLists.txt.user
 CMakeUserPresets.json
+
+
+# Added by cargo
+
+/target
+Cargo.lock
