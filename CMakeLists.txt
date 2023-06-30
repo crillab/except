@@ -21,13 +21,6 @@ add_library(
 )
 add_library(crillab-except::crillab-except ALIAS crillab-except_crillab-except)
 
-include(GenerateExportHeader)
-generate_export_header(
-    crillab-except_crillab-except
-    BASE_NAME crillab-except
-    EXPORT_FILE_NAME export/crillab-except/except.hpp
-    CUSTOM_CONTENT_FROM_VARIABLE pragma_suppress_c4251
-)
 
 if(NOT BUILD_SHARED_LIBS)
   target_compile_definitions(crillab-except_crillab-except PUBLIC CRILLAB_EXCEPT_STATIC_DEFINE)

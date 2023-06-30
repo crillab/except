@@ -14,7 +14,7 @@ set(package crillab-except)
 install(
     DIRECTORY
     include/
-    "${PROJECT_BINARY_DIR}/export/"
+    #"${PROJECT_BINARY_DIR}/export/"
     DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}"
     COMPONENT crillab-except_Development
 )
