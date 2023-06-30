@@ -18,7 +18,7 @@
  * If not, see {@link http:www.gnu.orglicenses}.                              *
  ******************************************************************************/
 
-#include "crillab-except/except.hpp"
+#include "../include/crillab-except/except.hpp"
 
 #include <utility>
 #include <cstring>

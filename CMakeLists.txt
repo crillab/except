@@ -43,18 +43,6 @@ set_target_properties(
     OUTPUT_NAME crillab-except
 )
 
-target_include_directories(
-    crillab-except_crillab-except ${warning_guard}
-    PUBLIC
-    "$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>"
-)
-
-target_include_directories(
-    crillab-except_crillab-except SYSTEM
-    PUBLIC
-    "$<BUILD_INTERFACE:${PROJECT_BINARY_DIR}/export>"
-)
-
 target_compile_features(crillab-except_crillab-except PUBLIC cxx_std_17)
 
 # ---- Install rules ----
