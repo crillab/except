@@ -40,7 +40,7 @@ write_basic_package_version_file(
 
 # Allow package maintainers to freely override the path for the configs
 set(
-    crillab-except_INSTALL_CMAKEDIR "${CMAKE_INSTALL_LIBDIR}/../share/${package}"
+    crillab-except_INSTALL_CMAKEDIR "${CMAKE_INSTALL_LIBDIR}/share/${package}"
     CACHE PATH "CMake package config location relative to the install prefix"
 )
 mark_as_advanced(crillab-except_INSTALL_CMAKEDIR)
